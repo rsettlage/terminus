@@ -16,7 +16,7 @@ ENV PATH="/root/.cargo/bin:${PATH}"
 
 RUN wget https://github.com/COMBINE-lab/terminus/archive/refs/tags/v$TERMVER.tar.gz && \
     tar -xf v$TERMVER.tar.gz && \
-    cd terminus-0.1.0 && \
+    cd terminus-$TERMVER && \
     cargo build --release
 
 env PATH="/terminus-0.1.0/target/release:${PATH}"
